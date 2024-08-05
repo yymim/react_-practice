@@ -196,18 +196,15 @@ const Gridcomp = function ({ initialData, format, sendDataToParent }) {
     <div
       style={{
         ...style,
-        boxSizing: "border-box",
-        borderRight: "1px solid #0e9151",
-        borderBottom: "1px solid #0e9151",
-        position: "absolute",
         userSelect: isDrag.current,
         backgroundColor: isSelected
-          ? "#d6ece2"
+          ? "#4d4d4d"
           : rowIndex % 2 === 0
-          ? "#f5f5f5"
-          : "#ffffff",
-        overflow: "hidden",
-        padding: style.width <= 20 ? "0px 0px 0px 0px" : "0px 10px 0px 10px",
+          ? "#000"
+          : "#111",
+        color: isSelected
+        ? "#fff"
+        : "#9a9a9a",
       }}
       className={
         `cell ${rowIndex % 2 === 0 ? "even" : "odd"} ` +
