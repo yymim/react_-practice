@@ -310,8 +310,8 @@ function App() {
           <button
             className={
               no === 2
-                ? "appDiv_bodyDiv_topDiv__tabButton click"
-                : "appDiv_bodyDiv_topDiv__tabButton"
+                ? "appDiv_bodyDiv_topDiv__tabButton last click"
+                : "appDiv_bodyDiv_topDiv__tabButton last"
             }
             onClick={() => {
               isTran.current = false;

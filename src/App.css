@@ -94,19 +94,23 @@
   color: #878f8b;
   font-weight: 600;
   overflow: hidden;
-  background: #000;
+  background: none;
 }
 
 .appDiv_bodyDiv_topDiv__tabButton::before {
   display: block;
   content: '';
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 1px;
-  background: #fff;
-  opacity: 0.18;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 15px;
+  background: #565656;
+}
+
+.appDiv_bodyDiv_topDiv__tabButton.last::before {
+  display: none;
 }
 
 .appDiv_bodyDiv_topDiv__tabButton .title {
@@ -121,19 +125,7 @@
 }
 
 .appDiv_bodyDiv_topDiv__tabButton.click {
-  color: #158c5a;
-  position: relative;
-  font-size: 18px;
-  padding-bottom: 3px;
-  background: #000;
-}
-
-.appDiv_bodyDiv_topDiv__tabButton.click::before{
-  opacity: 0.5;
-}
-
-.appDiv_bodyDiv_topDiv__tabButton.click .title .icon {
-  font-size: 14px;
+  color: #ffffff;
 }
 
 .appDiv_bodyDiv_mainDiv {

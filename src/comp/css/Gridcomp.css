@@ -90,8 +90,8 @@
 
 .cell {
   box-sizing: border-box;
-  border-right: 1px solid rgb(14, 145, 81);
-  border-bottom: 1px solid rgb(14, 145, 81);
+  border-right: 1px solid #2e2e2e;
+  border-bottom: 1px solid #2e2e2e;
   overflow: hidden;
   padding: 0px 10px;
   display: flex;
