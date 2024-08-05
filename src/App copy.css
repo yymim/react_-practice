@@ -1,0 +1,95 @@
+.appDiv {
+  padding: 5px;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.appDiv_topDiv {
+  margin: 0px 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.appDiv_topDiv_mainDiv {
+  display: flex;
+  align-items: baseline;
+}
+
+.appDiv_topDiv_mainDiv button {
+  margin: 0px 0px 0px 5px;
+  width: 80px;
+}
+
+.appDiv_topDiv_mainDiv_label {
+  padding: 4px 6px;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.appDiv_topDiv_compDiv {
+  margin: 6px 0px;
+  height: 28px;
+  display: flex;
+}
+
+.appDiv_topDiv_compDiv input[type="text"] {
+  margin: 0px 0px 0px 0px;
+  width: 482px;
+}
+
+.appDiv_topDiv_compDiv button {
+  margin: 0px 0px 0px 5px;
+  width: 80px;
+}
+
+.appDiv_bodyDiv {
+  position: absolute;
+  top: 70px;
+  bottom: 50px;
+  width: calc(100% - 30px);
+  margin: 15px 10px 0px 10px;
+}
+
+.appDiv_bodyDiv_topDiv__tabButton {
+  border: 1px solid black;
+  height: 28px;
+  width: 120px;
+}
+
+.appDiv_bodyDiv_topDiv__tabButton_click {
+  border: 1px solid black;
+  border-bottom: 0px;
+  height: 28px;
+  width: 120px;
+
+  background-color: white;
+}
+
+.appDiv_bodyDiv_topDiv {
+  padding-top: 5px;
+  height: 27px;
+}
+
+.appDiv_bodyDiv_mainDiv {
+  height: calc(99% - 60px);
+  width: calc(100% - 30px);
+  border: 1px solid black;
+
+  padding: 15px;
+  overflow: auto;
+}
+
+footer {
+  position: absolute;
+  bottom: 20px;
+}
+.footerDiv {
+  width: 100%;
+  height: 100%;
+}
+
+.fLabel {
+  color: #888;
+}

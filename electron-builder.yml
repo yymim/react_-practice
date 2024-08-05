@@ -1,0 +1,23 @@
+appId: com.dd.tool
+productName: dd
+directories:
+  output: release/
+files:
+  - "!**/*.ts"
+  - "!**/*.js.map"
+  - "!**/.env"
+win:
+  target: nsis
+mac:
+  target:
+    - dmg
+    - zip
+linux:
+  target:
+    - AppImage
+    - deb
+publish:
+  provider: github
+  repo: DD-client
+  owner: NBYTE-CORPORATION
+  token: ${GH_TOKEN}

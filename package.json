@@ -1,0 +1,99 @@
+{
+  "name": "dd",
+  "version": "0.1.1",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.6.0",
+    "@fortawesome/free-brands-svg-icons": "^6.6.0",
+    "@fortawesome/free-regular-svg-icons": "^6.6.0",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.7.2",
+    "concurrently": "^6.5.1",
+    "dotenv": "^16.4.5",
+    "electron-is-dev": "^3.0.1",
+    "electron-updater": "^6.2.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-resizable": "^3.0.5",
+    "react-scripts": "^5.0.1",
+    "react-virtualized": "^9.22.5",
+    "react-window": "^1.8.10",
+    "wait-on": "^7.2.0",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "electron": "^31.0.1",
+    "electron-builder": "^24.9.1"
+  },
+  "build": {
+    "appId": "DD",
+    "productName": "DD",
+    "asar": true,
+    "directories": {
+      "buildResources": "build",
+      "output": "release"
+    },
+    "files": [
+      "package.json",
+      "build/**/*",
+      ".env"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "./public/logo/logo-1024.png"
+    },
+    "nsis": {
+      "oneClick": true,
+      "createDesktopShortcut": true,
+      "shortcutName": "DD"
+    },
+    "mac": {
+      "identity": null,
+      "target": [
+        "dmg"
+      ],
+      "icon": "./public/logo/logo-1024.png"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  },
+  "type": "module",
+  "main": "public/electron.js",
+  "homepage": "./",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "electron-start": "npm run build && concurrently \"npm:start\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron-start2": "electron ./public/electron.js",
+    "dev": "concurrently \"npm run start\" \"wait-on http://localhost:3000 && npm run electron-start2\"",
+    "electron-build": "electron-builder build --config electron-builder.yml",
+    "electron": "wait-on http://localhost:3000 && electron .",
+    "deploy": "npm run build && electron-builder build",
+    "release": "node build.mjs"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

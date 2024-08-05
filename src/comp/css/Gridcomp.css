@@ -1,0 +1,176 @@
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.grid-container__wrap{
+  overflow: auto;
+  border: 1px solid #0e9151;
+  border-top: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.grid-container__wrap::-webkit-scrollbar {
+  width: 10px;
+}
+
+.grid-container__wrap::-webkit-scrollbar-thumb {
+  background-color: #2f3542;
+  border-radius: 5px;
+}
+
+.grid-container__wrap::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  box-shadow: inset 0px 0px 3px white;
+}
+
+.grid-container__table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  word-break: keep-all;
+  border-radius: 8px;
+  border-style: hidden;
+  box-shadow: 0 0 0 1px #0e9151;
+  overflow: hidden;
+}
+
+.grid-container__table caption {
+  font-size:0
+}
+
+.grid-container__table th {
+  border: 1px solid #0e9151;
+  font-weight: 400;
+  padding: 0px 15px;
+  line-height: 38px;
+}
+
+.grid-container__table td {
+  border: 1px solid #0e9151;
+  padding: 0px 10px;
+  background: #f5f5f5;
+}
+
+.grid-container__table td input, select, textarea{
+  border: 1px solid #eee;
+  line-height: 25px;
+  min-height: 25px;
+  width: 100%;
+  border-radius: 5px;
+  color: #111;
+  padding: 0 5px;
+}
+
+.grid-container__table td textarea{
+  line-height: unset;
+}
+
+.grid-container__table td .btn{
+  display: inline-block;
+  padding: 0 12px;
+  line-height: 24px;
+}
+
+.header {
+  flex: 0 0 auto;
+  border: 1px solid #0e9151;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.body {
+  flex: 1 1 auto;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative; /* 위치 설정 추가 */
+  color: #121212;
+  font-weight: 300;
+}
+
+.cell label {
+  font-size: 14px;
+}
+
+.cell.even {
+  background-color: #f7fafa;
+}
+
+.cell.odd {
+  background-color: #ffffff;
+}
+
+.header-cell {
+  position: relative; /* 위치 설정 추가 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 400;
+  border-right: 1px solid #0e9151;
+}
+
+.resize-handle {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  cursor: col-resize;
+}
+
+.Gird_button {
+  width: 32px;
+  margin: 0 auto;
+  font-size: 12px !important;
+  border-radius: 5px !important;
+  line-height: 20px;
+}
+
+/* TabSearchDiv.tab01 */
+.TabSearchDiv.tab01 .grid-container .header-cell-6
+, .TabSearchDiv.tab01 .grid-container .header-cell-5{
+  font-size: 14px;
+}
+
+.TabSearchDiv.tab01 .grid-container .header-cell-6 {
+  border-right: none;
+}
+
+
+/* TabSearchDiv.tab02 */
+.TabSearchDiv.tab02 .grid-container .header-cell-5 {
+  border-right: none;
+}
+
+
+/* TabSearchDiv.tab03 */
+.TabSearchDiv.tab03 .grid-container .header-cell-1 {
+  border-right: none;
+}
+
+
+/* SearchDomainPop */
+.SearchDomainPop .grid-container .header-cell-5
+, .SearchDomainPop .grid-container .header-cell-6 {
+  font-size: 15px !important;
+}
+
+.SearchDomainPop .grid-container .header-cell-6 {
+  border-right: none;
+}
+
+
+
+.popDiv .grid-container .header-cell {
+  border-right: 1px solid #0e9151 !important;
+}

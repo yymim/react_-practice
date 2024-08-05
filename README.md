@@ -1,2 +1,1 @@
-# react_-practice
-react_ practice
+# 데이터 사전 클라이언트 프로젝트
